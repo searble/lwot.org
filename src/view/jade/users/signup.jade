@@ -1,4 +1,33 @@
 link(rel="stylesheet", href="{$ROOT}/view/css/users/signup.css")
 
 div.signup-container(ng-controller="SignupCtrl")
-    | Sign Up Page
+    div.signup-form-container.container-limited
+        div.signup-form-header
+            h1 LWOT
+            h2 Sign Up
+
+        div.signup-form-body
+            div.form-group
+                p User ID
+                i.fa.fa-user
+                div.signup-form-input
+                    input.form-control(type="text", ng-model="users.userId")
+            div.form-group
+                p Password
+                i.fa.fa-lock
+                div.signup-form-input
+                    input.form-control(type="password", ng-model="users.passwd")
+            div.form-group
+                p Check Passwd
+                i.fa.fa-lock
+                div.signup-form-input
+                    input.form-control(type="password", ng-model="users.chkPasswd")
+
+            div.form-group
+                p Email
+                i.fa.fa-envelope.signup-icon-email
+                div.signup-form-input
+                    input.form-control(type="email", ng-model="users.email")
+
+        div.signup-form-footer
+            md-button.md-raised.md-primary.signup-btn-signup(ng-click="signup()") Sign Up

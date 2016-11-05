@@ -1,4 +1,25 @@
 link(rel="stylesheet", href="{$ROOT}/view/css/users/signin.css")
 
 div.signin-container(ng-controller="SigninCtrl")
-    | Sign In Page
+    div.signin-form-container.container-limited
+        div.signin-form-header
+            h1 LWOT
+            h2 Sign In
+
+        div.signin-form-body
+            div.form-group
+                p User ID
+                i.fa.fa-user
+                div.signin-form-input
+                    input.form-control(type="text", ng-model="users.userId")
+            div.form-group
+                p Password
+                i.fa.fa-lock
+                div.signin-form-input
+                    input.form-control(type="password", ng-model="users.passwd")
+
+        div.signin-form-footer
+            md-button.md-raised.md-primary(ng-click="signin()") Sign In
+            md-divider.signin-divider
+            p Create An Account
+            md-button.md-raised.md-primary.signin-btn-signup(ng-href="/#/signup") Sign Up

@@ -1,0 +1,21 @@
+{
+  "port": 27017,
+  "session": {
+    "secret": "SessionKey",
+    "resave": false,
+    "saveUninitialized": false
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379
+  },
+  "sendmail": {
+    "host": "smtp.host-server.com",
+    "user": "email@email.com",
+    "password": "password",
+    "from": "Service <email@email.com>",
+    "ssl": true
+  },
+  "encrypt": "EncryptKey",
+  "dev": true
+}

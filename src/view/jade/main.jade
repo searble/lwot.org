@@ -1,0 +1,51 @@
+link(rel="stylesheet", href="{$ROOT}/view/css/main.css")
+
+div.main-container(ng-controller="MainCtrl")
+    div.main-search
+        div.input-group
+            input.form-control(type="text", placeholder="Find Packages")
+            span.input-group-btn
+                button.btn.btn-default(type="button")
+                    i.fa.fa-search
+
+    div.main-main(layout="column", layout-align="center center")
+        div.container-limited
+            h1 LWOT
+            p Leave Work On Time!
+
+    div.main-description.main-bak-color-green(layout="row", layout-align="center center")
+        div.container-limited
+            h2 About LWOT
+            p Welcome to Leave Work On Time.
+            p LWOT is a kind of framework that can be developed at the same time Web Service and Electron, Hybrid Web App in the reaction type.
+
+    div.main-description(layout="row", layout-align="center center")
+        div.container-limited
+            h2 Getting Started
+            div.main-help
+                p 1. Install of LWOT
+                pre # npm install -g lwot
+                p 2. Create Application
+                pre # lwot create myApp
+                p 3. Change Directory to myApp
+                pre # cd myApp
+                p 4. Install of Platform
+                pre # lwot install https://github.com/searble/lwot-platform-express
+                p 5. Install of bower module
+                pre # lwot bower install bootstrap
+                p 6. Install of node module
+                pre # lwot npm express install async
+                p 7. Build of Project
+                pre # lwot build express
+                p 8. Run of Project
+                pre # lwot run express
+                p Appendix. Build & Watch
+                pre # lwot build                # for all installed platforms<br># lwot build express        # for express only<br># lwot watch                # for all installed platforms<br># lwot watch express        # for express only
+                p Appendix. Run
+                pre # lwot run express          # for start express
+
+    div.main-description.main-bak-color-yellow(layout="row", layout-align="center center")
+        div.container-limited
+            h2 Git Repository
+            p
+                a.btn.btn-primary.btn-lg(ng-href="https://github.com/searble/lwot") Go to Git Repository

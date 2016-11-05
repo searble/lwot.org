@@ -1,0 +1,42 @@
+@nav-top-height: 44px;
+
+.nav-top-container {
+  height: @nav-top-height;
+  background-color: #34495E;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.nav-top-logo {
+  display: inline-block;
+
+  & > a {
+    text-decoration: none;
+    font-family: "Architects Daughter", cursive;
+    font-size: 31px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: hand;
+  }
+}
+
+.nav-top-list {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & > li {
+    float: left;
+
+    & > a {
+      padding-left: 24px;
+      text-decoration: none;
+      line-height: 44px;
+      font-family: 'Geomanist', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.8);
+      cursor: hand;
+    }
+  }
+}

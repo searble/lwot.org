@@ -1,11 +1,12 @@
 doctype html
-html(ng-app="app")
+html(ng-app="lwotOrg")
     head
         include components/jade/header
         script(src="{$ROOT}/view/js/index.js")
-        link(rel="stylesheet", href="{$ROOT}/view/css/index.css")
+        script(src="{$ROOT}/view/js/main.js")
+        script(src="{$ROOT}/view/js/users/signin.js")
+        script(src="{$ROOT}/view/js/users/signup.js")
 
-    body(ng-controller='ctrl')
-        h1 {{appInfo.name}}
-        hr
-        h3 {{appInfo.comment}}
+    body
+        include view/jade/nav/top
+        ng-view
